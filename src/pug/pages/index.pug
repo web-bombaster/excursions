@@ -1,0 +1,148 @@
+- var pageType = 'home';
+//- Для pageType указать тип страницы. Варианты:
+	home - главная страница
+	services - сделать
+	vnutr - простая внутренняя страница
+	otzyvy -
+	faq -
+	actions - страница с новостями (раздел)
+	news - страница с новостями (раздел)
+	gallery -
+	content-posts - страница с постами в виде простого списка как на Мегагруппе
+	content-table - table
+
+doctype html
+html(lang="ru-RU")
+	include ../includes/head
+
+	if pageType === 'home'
+		body#top
+
+			if pageType === 'home'
+				//-include ../includes/top-panel
+				include ../includes/header
+				//- include ../includes/section-hero
+				//- большой эффектный слайдер
+				include ../includes/slider-bigslider
+				include ../includes/services
+				//- include ../includes/section-about
+				//- include ../includes/section-faq
+				//- include ../includes/section-advantages
+				include ../includes/section-news
+				include ../includes/otzyvy
+
+				include ../includes/section-contacts2
+				include ../includes/footer
+				include ../includes/help-panel
+				include ../includes/hidden
+
+				//- Подключаем скрипты и стили
+				include ../includes/sourse
+				//-if pageType === 'home'
+					script(src="../../libs/animate-number.js")
+
+	if pageType != 'home'
+		body.vnutr#top
+
+			if pageType === 'otzyvy'
+				//-include ../includes/top-panel
+				include ../includes/header
+				.wrapper
+					include ../includes/breadcrumbs
+				.wrapper
+					main
+						include ../includes/content-otzyvy
+
+			if pageType === 'faq'
+				//-include ../includes/top-panel
+				include ../includes/header
+				.wrapper
+					include ../includes/breadcrumbs
+				.wrapper
+					main
+						include ../includes/content-faq
+
+			if pageType === 'gallery'
+				//-include ../includes/top-panel
+				include ../includes/header
+				.wrapper
+					include ../includes/breadcrumbs
+				.wrapper
+					main
+						include ../includes/content-gallery
+
+			if pageType === 'vnutr'
+				//-include ../includes/top-panel
+				include ../includes/header
+				.wrapper
+					include ../includes/breadcrumbs
+				.wrapper
+					main
+						include ../includes/content
+
+			if pageType === 'services'
+				//-include ../includes/top-panel
+				include ../includes/header
+				.wrapper
+					include ../includes/breadcrumbs
+				.wrapper
+					main
+						//- include ../includes/content-services
+						include ../includes/content-services2
+
+			if pageType === 'services-item'
+				//-include ../includes/top-panel
+				include ../includes/header
+				.wrapper
+					include ../includes/breadcrumbs
+				.wrapper
+					main
+						include ../includes/content-services-item
+
+			if pageType === 'news'
+				//-include ../includes/top-panel
+				include ../includes/header
+				.wrapper
+					include ../includes/breadcrumbs
+				.wrapper
+					main
+						include ../includes/content-news
+
+			if pageType === 'actions'
+				//-include ../includes/top-panel
+				include ../includes/header
+				.wrapper
+					include ../includes/breadcrumbs
+				.wrapper
+					main
+						include ../includes/content-actions
+
+			//- content-posts - страница с постами в виде простого списка как на Мегагруппе
+			if pageType === 'content-posts'
+				//-include ../includes/top-panel
+				include ../includes/header
+				.wrapper
+					include ../includes/breadcrumbs
+				.wrapper
+					main
+						include ../includes/content-posts
+
+			//- content-table - адаптивная таблица
+			if pageType === 'content-table'
+				//-include ../includes/top-panel
+				include ../includes/header
+				.wrapper
+					include ../includes/breadcrumbs
+				.wrapper
+					main
+						include ../includes/content-table
+
+			include ../includes/section-contacts2
+			include ../includes/footer
+			include ../includes/help-panel
+			include ../includes/hidden
+
+			//- Подключаем скрипты и стили
+			include ../includes/sourse
+			//-if pageType === 'home'
+				script(src="../../libs/animate-number.js")

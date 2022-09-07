@@ -1,0 +1,33 @@
+.socbtn {
+    margin-top: 45px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 15px;
+
+    @media screen and (max-width: $break_sm) {
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    &__item {
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 0 7px;
+
+        @media screen and (max-width: $break_sm) {
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            display: block;
+            height: 22px;
+            max-width: 100%;
+        }
+    }
+}

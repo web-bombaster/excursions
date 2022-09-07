@@ -1,0 +1,113 @@
+.services {
+    // text-align: center;
+
+    h2,
+    h3 {
+        text-align: center;
+    }
+
+    &-container {
+        @include row-flex;
+        margin-top: 40px;
+        // justify-content: center;
+    }
+
+    &-item {
+        position: relative;
+        @include col();
+        @include size(4);
+        @include size-sm(6);
+        @include size-xs(12);
+        margin-bottom: 30px;
+        padding: 0;
+
+        box-sizing: border-box;
+        box-shadow: 0px 0px 5px 1px rgba(155, 155, 155, 0.25);
+        background: rgba(245, 245, 245, 0);
+
+        text-decoration: none;
+        text-align-last: left;
+        color: $color-default;
+        transition: .5s;
+        // overflow: hidden;
+
+        &:hover {
+            background: rgba(245, 245, 245, 0.1);
+            box-shadow: 0px 0px 10px 1px rgba(155, 155, 155, 0.25);
+            transition: all .5s;
+            //box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.45);
+
+            img {
+                transform: scale(1.1);
+                transition: all .5s;
+            }
+        }
+
+
+    }
+
+    &-title {}
+}
+
+
+.services-img {
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all .5s;
+        // margin-bottom: 20px;
+    }
+}
+
+.services-box {
+    padding: 15px;
+}
+
+.services-tags {
+    margin-bottom: 15px;
+    @include pix-to-rem(12px);
+}
+
+.tags {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+
+    background-color: $color-akcent3;
+    border-radius: 4px;
+}
+
+.services-title {
+    margin-bottom: 15px;
+
+
+
+    @include pix-to-rem(20px);
+    font-family: $font-akcent;
+    // color: #fff;
+    line-height: 1.25;
+    // text-transform: uppercase;
+
+    // border: 1px solid #fff;
+    // box-shadow: inset 0px 0px 5px 1px rgba($color-akcent3, 0.25);
+}
+
+.services-descr {
+    margin-bottom: 15px;
+}
+
+.services-price {
+    // font-family: $font-akcent;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.services-btn {
+    margin-top: 20px;
+    background-color: #fff;
+}
